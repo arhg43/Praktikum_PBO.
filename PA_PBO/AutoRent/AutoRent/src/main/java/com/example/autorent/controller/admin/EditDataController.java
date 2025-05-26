@@ -28,18 +28,12 @@ public class EditDataController {
     private Mobil currentMobil;
 
     private final MobilRepository mobilRepository = MobilRepository.getInstance(); // Instance repository
-
-    /**
-     * Mengisi form dengan data dari mobil yang akan diedit
-     */
+    
     public void setMobil(Mobil mobil) {
         this.currentMobil = mobil;
         populateForm(mobil);
     }
-
-    /**
-     * Handle aksi tombol "Browse"
-     */
+    
     @FXML
     private void handleBrowseImage(ActionEvent event) {
         selectedImageFile = chooseImageFile();
@@ -47,10 +41,7 @@ public class EditDataController {
             mobilImageView.setImage(new Image(selectedImageFile.toURI().toString()));
         }
     }
-
-    /**
-     * Handle aksi tombol "Edit"
-     */
+    
     @FXML
     private void handleEditData(ActionEvent event) {
         if (!isInputValid()) return;
