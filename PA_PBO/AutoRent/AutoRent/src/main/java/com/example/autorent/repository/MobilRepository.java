@@ -13,7 +13,7 @@ public class MobilRepository implements MobilDao {
 
     public MobilRepository(){
         daftarMobil.add(new Mobil("B1234XYZ", "Toyota Avanza", 500000, true, "assets/images/B1234XYZ_avanza.png"));
-        daftarMobil.add(new Mobil("B5678ABC", "Honda Brio", 600000, true, "assets/images/B5678ABC_brio.png"));
+        daftarMobil.add(new Mobil("B5678ABC", "Honda Brio", 600000, true, "assets/images/B5678ABC_brio.jpg"));
     }
 
     public static MobilRepository getInstance() {
