@@ -9,11 +9,9 @@
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.autorent.controller.auth.LoginController"
       prefWidth="900.0">
-
-    <!-- CONTENT -->
+    
     <HBox VBox.vgrow="ALWAYS">
-
-        <!-- ===== PANEL KIRI (50%) ===== -->
+        
         <StackPane style="-fx-background-color:#2056CB;"
                    HBox.hgrow="ALWAYS" maxWidth="Infinity">
             <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
@@ -30,8 +28,7 @@
                 </StackPane>
             </VBox>
         </StackPane>
-
-        <!-- ===== PANEL KANAN (50%) ===== -->
+        
         <VBox alignment="CENTER" HBox.hgrow="ALWAYS" maxWidth="Infinity">
             <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
 
@@ -68,8 +65,7 @@
                             style="-fx-background-color:#3383FF; -fx-text-fill:white; -fx-background-radius:999;">
                         <font><Font name="Plus Jakarta Sans Bold" size="14"/></font>
                     </Button>
-
-                    <!-- Link register dibungkus HBox agar centered -->
+                    
                     <HBox alignment="CENTER">
                         <Label fx:id="registerLabel"
                                text="Tidak Memiliki Akun? Daftar Sekarang"
