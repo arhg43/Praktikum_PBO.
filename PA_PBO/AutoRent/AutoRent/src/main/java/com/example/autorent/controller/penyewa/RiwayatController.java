@@ -112,10 +112,10 @@ public class RiwayatController {
         String baseStyle = "-fx-font-weight: bold; -fx-padding: 4 8 4 8; -fx-background-radius: 5; ";
 
         return switch (status) {
-            case "Dibatalkan" -> baseStyle + "-fx-background-color: #FBE7E8; -fx-text-fill: #A30D11;"; // merah
-            case "Disewakan" -> baseStyle + "-fx-background-color: #EBF9F1; -fx-text-fill: #1F9254;"; // hijau
-            case "Menunggu Pembayaran" -> baseStyle + "-fx-background-color: #f1c40f; -fx-text-fill: black;"; // kuning
-            case "Selesai" -> baseStyle + "-fx-background-color: #3498db; -fx-text-fill: white;"; // biru
+            case "Dibatalkan" -> baseStyle + "-fx-background-color: #FBE7E8; -fx-text-fill: #A30D11;"; 
+            case "Disewakan" -> baseStyle + "-fx-background-color: #EBF9F1; -fx-text-fill: #1F9254;"; 
+            case "Menunggu Pembayaran" -> baseStyle + "-fx-background-color: #f1c40f; -fx-text-fill: black;"; 
+            case "Selesai" -> baseStyle + "-fx-background-color: #3498db; -fx-text-fill: white;"; 
             default -> baseStyle + "-fx-background-color: #f1c40f; -fx-text-fill: black;"; // default kuning
         };
     }
