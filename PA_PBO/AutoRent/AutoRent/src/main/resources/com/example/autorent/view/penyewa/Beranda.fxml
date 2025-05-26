@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.autorent.controller.penyewa.BerandaController">
+
+    <!-- Sidebar -->
+    <left>
+        <fx:include source="../komponen/side_bar_penyewa.fxml" />
+    </left>
+
+    <!-- Main Content -->
+    <center>
+        <VBox>
+            <!-- Header -->
+            <Label text="Beranda">
+                <font>
+                    <Font name="Arial" size="24" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="20" left="20" top="20" />
+                </VBox.margin>
+            </Label>
+
+            <!-- Grid for Car Cards -->
+            <GridPane fx:id="carGrid" hgap="20" vgap="20">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+            </GridPane>
+         <padding>
+            <Insets right="48.0" top="48.0" />
+         </padding>
+        </VBox>
+    </center>
+   <padding>
+      <Insets bottom="48.0" left="48.0" right="48.0" top="48.0" />
+   </padding>
+
+</BorderPane>

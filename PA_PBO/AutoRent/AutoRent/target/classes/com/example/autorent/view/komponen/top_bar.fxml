@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<!-- Top bar 48 px -->
+<HBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.autorent.controller.components.TopBarController"
+      minHeight="40.0" prefHeight="40.0" maxHeight="40.0"
+      style="-fx-background-color:#EFF5FF;">
+
+   <!-- Padding disesuaikan agar konten tetap proporsional -->
+   <padding>
+      <Insets top="8" right="16" bottom="8" left="16"/>
+   </padding>
+
+   <children>
+      <!-- Judul -->
+      <Label text="AutoRent" textFill="#1d64d8">
+         <font><Font name="Plus Jakarta Sans Bold" size="14"/></font>
+      </Label>
+
+      <!-- Spacer fleksibel -->
+      <Region HBox.hgrow="ALWAYS"/>
+
+      <!-- Ikon window control -->
+      <HBox alignment="CENTER_LEFT" spacing="24">
+         <FontIcon fx:id="btnMinimize" iconLiteral="fa-window-minimize" iconSize="16"/>
+         <FontIcon fx:id="btnRestore" iconLiteral="fa-window-restore" iconSize="16"/>
+         <FontIcon fx:id="btnClose" iconLiteral="fa-close" fill="#a30d11" iconSize="16"/>
+      </HBox>
+   </children>
+</HBox>

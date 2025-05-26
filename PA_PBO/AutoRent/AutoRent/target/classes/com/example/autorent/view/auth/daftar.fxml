@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.autorent.controller.auth.DaftarController"
+      prefWidth="900.0">
+
+    <HBox VBox.vgrow="ALWAYS">
+
+        <!-- ===== PANEL KIRI (50%) ===== -->
+        <StackPane style="-fx-background-color:#2056CB;" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+            <VBox alignment="TOP_CENTER" spacing="50">
+                <Label text="Selamat datang di AutoRent" textFill="WHITE">
+                    <font><Font name="System Bold" size="24"/></font>
+                </Label>
+                <StackPane VBox.vgrow="ALWAYS">
+                    <ImageView fitHeight="521" fitWidth="332" preserveRatio="true">
+                        <image><Image url="@../../../../../assets/car.png"/></image>
+                    </ImageView>
+                </StackPane>
+            </VBox>
+        </StackPane>
+
+        <!-- ===== PANEL KANAN (50%) ===== -->
+        <VBox alignment="CENTER" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+
+            <VBox alignment="CENTER" maxWidth="500" spacing="30">
+                <Label text="Daftar Akun AutoRent" style="-fx-font-weight:bold;">
+                    <font><Font size="24"/></font>
+                </Label>
+                <Label text="Silakan isi data diri Anda dengan benar">
+                    <font><Font size="14"/></font>
+                </Label>
+
+                <VBox spacing="20">
+                    <!-- Username -->
+                    <VBox spacing="5">
+                        <Label text="Nama Pengguna"/>
+                        <TextField fx:id="usernameField" prefHeight="40"
+                                   style="-fx-background-color:transparent;
+                                          -fx-border-color:transparent transparent #4B5563 transparent;
+                                          -fx-border-width:0 0 1 0;"/>
+                    </VBox>
+
+                    <!-- Password -->
+                    <VBox spacing="5">
+                        <Label text="Kata Sandi"/>
+                        <PasswordField fx:id="passwordField" prefHeight="40"
+                                       style="-fx-background-color:transparent;
+                                              -fx-border-color:transparent transparent #4B5563 transparent;
+                                              -fx-border-width:0 0 1 0;"/>
+                    </VBox>
+
+                    <VBox spacing="5">
+                        <Label text="No HP"/>
+                        <TextField fx:id="noHPField" prefHeight="40"
+                                   style="-fx-background-color:transparent;
+                      -fx-border-color:transparent transparent #4B5563 transparent;
+                      -fx-border-width:0 0 1 0;"/>
+                    </VBox>
+
+                    <!-- Tombol daftar -->
+                    <Button fx:id="registerButton" text="Daftar" onAction="#handleRegister"
+                            prefHeight="45" maxWidth="Infinity"
+                            style="-fx-background-color:#3383FF; -fx-text-fill:white; -fx-background-radius:999;">
+                        <font><Font name="Plus Jakarta Sans Bold" size="14"/></font>
+                    </Button>
+
+                    <!-- Link login -->
+                    <HBox alignment="CENTER">
+                        <Label fx:id="loginLabel"
+                               text="Sudah punya akun? Login"
+                               onMouseClicked="#goToLogin"
+                               style="-fx-text-fill:#3383FF; -fx-underline:true; -fx-cursor:hand;"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>

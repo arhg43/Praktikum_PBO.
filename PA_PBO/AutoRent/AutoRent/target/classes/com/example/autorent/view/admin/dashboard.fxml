@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="48.0" style="-fx-background-color: #fafafa;" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autorent.controller.admin.DashboardController">
+
+    <!-- Sidebar -->
+    <fx:include fx:id="sideBar" source="../komponen/side_bar_admin.fxml" />
+
+    <!-- Dashboard Content -->
+    <VBox spacing="20" style="-fx-background-color: #FAFAFA;" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="30" left="30" right="30" top="30" />
+        </padding>
+
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Dashboard" />
+
+        <!-- Show entries and Search field -->
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                  <TextField fx:id="searchField" prefHeight="30.0" prefWidth="300.0" promptText="Cari Nama Customer" />
+            <Region prefHeight="33.0" prefWidth="466.0" />
+                <Button fx:id="btnTambah" alignment="CENTER" mnemonicParsing="false" onAction="#handleTambahData" style="-fx-background-color: #1d64d8; -fx-text-fill: white; -fx-background-radius: 999;" text="Tambah Mobil">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding></Button>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="880.0" />
+
+        <!-- Table and Pagination Section -->
+        <VBox spacing="10">
+            <TableView fx:id="rentalTable" prefHeight="450.0" prefWidth="880.0" style="-fx-background-color: white; -fx-background-radius: 5;" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="platNomorColumn" prefWidth="170.0" text="Plat Nomor" />
+                    <TableColumn fx:id="mobilColumn" prefWidth="158.0" text="Mobil" />
+                    <TableColumn fx:id="customerColumn" prefWidth="180.0" text="Harga" />
+                    <TableColumn fx:id="tanggalSewaColumn" prefWidth="175.0" text="Status" />
+                    <TableColumn fx:id="hargaColumn" prefWidth="195.0" text="Action" />
+                </columns>
+            </TableView>
+        </VBox>
+    </VBox>
+   <padding>
+      <Insets bottom="48.0" left="48.0" right="48.0" top="48.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="477.0" prefWidth="577.0" style="-fx-background-color: #eef4ff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autorent.controller.admin.TambahDataController">
+
+    <VBox alignment="TOP_LEFT" layoutX="50.0" layoutY="30.0" spacing="15.0">
+        <!-- Judul -->
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Tambah Data" />
+
+        <!-- Input Merk Mobil -->
+        <TextField fx:id="merkMobilField" prefHeight="30" prefWidth="500" promptText="Merk Mobil" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #ccc transparent;" />
+
+        <!-- Input Plat Nomor -->
+        <TextField fx:id="platNomorField" prefHeight="30" prefWidth="500" promptText="Plat Nomor" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #ccc transparent;" />
+
+        <!-- Input Harga -->
+        <TextField fx:id="hargaField" prefHeight="30" prefWidth="500" promptText="Harga" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #ccc transparent;" />
+
+        <!-- Gambar Mobil -->
+        <ImageView fx:id="gambarView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+
+        <!-- Tombol Browse & Tambah -->
+        <VBox spacing="28.0">
+            <Button fx:id="browseButton" mnemonicParsing="false" style="-fx-background-color: #DBE8FE; -fx-background-radius: 999;" text="Browse Gambar">
+                <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                </padding>
+            </Button>
+
+            <Button fx:id="tambahButton" prefHeight="40" prefWidth="500" style="-fx-background-color: #367AF6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 999;" text="Tambah Data" />
+        </VBox>
+
+    </VBox>
+   <padding>
+      <Insets right="48.0" top="48.0" />
+   </padding>
+</AnchorPane>
